@@ -1,0 +1,170 @@
+:root {
+    --bg-color: #1e2a3a;
+    --container-bg: #233446;
+    --text-color: #ffffff;
+    --title-color: #a3ff12;
+    --input-bg: #354b6d;
+    --input-border: #4a5d78;
+    --button-bg: #a3ff12;
+    --button-color: #233446;
+    --result-bg: #2c4058;
+    --result-label: #a3ff12;
+}
+.light-theme {
+    --bg-color: #ffffff;
+    --container-bg: #f8f9fa;
+    --text-color: #333333;
+    --title-color: #2554d8;
+    --input-bg: #ffffff;
+    --input-border: #ced4da;
+    --button-bg: #2554d8;
+    --button-color: #ffffff;
+    --result-bg: #ffffff;
+    --result-label: #2554d8;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--container-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+h1 {
+    text-align: center;
+    color: var(--title-color);
+    margin-bottom: 30px;
+}
+label, input, select, button {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+input, select {
+    padding: 12px;
+    border: 1px solid var(--input-border);
+    border-radius: 6px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+}
+button {
+    padding: 12px;
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+button:hover {
+    opacity: 0.9;
+}
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+.result-item {
+    background-color: var(--result-bg);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+.result-label {
+    font-size: 14px;
+    color: var(--result-label);
+    margin-bottom: 5px;
+}
+.result-value {
+    font-size: 24px;
+    font-weight: bold;
+}
+.theme-switch-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.theme-switch {
+    display: inline-block;
+    height: 24px;
+    position: relative;
+    width: 44px;
+}
+.theme-switch input {
+    display: none;
+}
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    border-radius: 24px;
+}
+.slider:before {
+    background-color: #fff;
+    bottom: 3px;
+    content: "";
+    height: 18px;
+    left: 3px;
+    position: absolute;
+    transition: .4s;
+    width: 18px;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #2196F3;
+}
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+.button-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.go-solar-button {
+    flex-grow: 1;
+}
+.refresh-button {
+    padding: 12px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-grow: 0;
+    width: auto;
+    font-size: 18px;
+}
+.consultation-button-container {
+    display: none;
+    width: 100%;
+    margin-top: 20px;
+}
+.consultation-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #2554d8;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.consultation-button:hover {
+    background-color: #1d41b0;
+}
